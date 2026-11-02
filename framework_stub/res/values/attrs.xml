@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="name" format="string"/>
+    <attr name="label" format="reference"/>
+    <attr name="icon" format="reference"/>
+    <attr name="exported" format="boolean"/>
+    <attr name="theme" format="reference"/>
+    <attr name="permission" format="string"/>
+    <public type="attr" name="name"/>
+    <public type="attr" name="label"/>
+    <public type="attr" name="icon"/>
+    <public type="attr" name="exported"/>
+    <public type="attr" name="theme"/>
+    <public type="attr" name="permission"/>
+</resources>
