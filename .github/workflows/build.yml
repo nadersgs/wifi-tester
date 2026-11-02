@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  actions: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,11 +29,7 @@ jobs:
         run: sdkmanager "build-tools;36.0.0" "platforms;android-35"
 
       - name: Build APK
-        run: |
-          bash build.sh
-        env:
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
-          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
+        run: bash build.sh
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
